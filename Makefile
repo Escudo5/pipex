@@ -17,13 +17,12 @@ LIBFT = $(LIBFT_DIR) /libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(LIBFT)
+$(NAME): $(OBJS) | $(LIBFT)
 		$(CC) $(OBJS) -L$(LIBFT_DIR) -lft -o $(NAME)
 
 bonus: $(NAME_BONUS)
 
-$(NAME_BONUS) : $(OBJS_BONUS) $(LIBFT)
-		$(MAKE) -C $(LIBFT_DIR)
+$(NAME_BONUS) : $(OBJS_BONUS) | $(LIBFT)
 		$(CC) $(CFLAGS) $(OBJS_BONUS) -L$(LIBFT_DIR) -lft -o $(NAME_BONUS)
 
 $(LIBFT):
