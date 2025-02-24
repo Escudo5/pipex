@@ -6,12 +6,12 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:22:34 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/24 12:25:42 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/02/24 12:32:18 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
-# define PIEPEX_H
+# define PIPEX_H
 
 # include "custom-libft/libft.h"
 # include <string.h>

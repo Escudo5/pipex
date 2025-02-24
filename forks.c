@@ -1,10 +1,5 @@
 #include "pipex.h"
 
-
-
-//funcion de free kids
-
-
 int ft_kid_2(int *fd, int *int_array, char  **command_2, char **env)
 {
     char *path_command;
