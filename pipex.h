@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:22:34 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/24 12:32:18 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/02/24 13:04:35 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PIPEX_H
 
 # include "custom-libft/libft.h"
+# include "./custom-libft/ft_printf/ft_printf.h"
 # include <string.h>
 # include <stdlib.h>
 # include <stdio.h>

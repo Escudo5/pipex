@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:41:26 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/24 12:12:11 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/02/24 13:16:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char *ft_get_path_command(char **command, char **env, char *path_mid)
 
     if (ft_strchr(command[0], '/'))
         if (access(command[0], X_OK)== 0)
-            return(ftstrdup(command[0]));
+            return(ft_strdup(command[0]));
     i = -1;
     while (env[++i])
     {

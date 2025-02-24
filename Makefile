@@ -1,7 +1,7 @@
 NAME = pipex
 NAME_BONUS = pipex_bonus
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g3
+CFLAGS = -Wall -Werror -Wextra -g3 -Icustom-libft
 
 SRCS = main.c forks.c path.c utils.c
 
@@ -11,7 +11,7 @@ SRCS_BONUS =
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
-LIBFT_DIR = libft
+LIBFT_DIR = custom-libft
 LIBFT = $(LIBFT_DIR) /libft.a
 
 
