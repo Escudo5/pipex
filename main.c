@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:21:55 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/24 13:11:22 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/02/24 16:18:46 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ int	main(int argc, char **argv, char **env)
 	status = ft_fork(fd, command_1, command_2, env);
 	close(fd[0]);
 	close(fd[1]);
-	ft_free_kids(command_1);
-	ft_free_kids(command_2);
 	return(status);
 }
 
