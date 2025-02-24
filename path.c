@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:41:26 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/24 13:16:32 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/02/24 16:40:49 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char *ft_get_path_command(char **command, char **env, char *path_mid)
     i = -1;
     while (env[++i])
     {
-        if (ft_strncmp("PATH=", env[i], 5))
+        if (ft_strncmp("PATH=", env[i], 5) == 0)
         {
             path_list = ft_split(env[i], ':');
             path = ft_check_command(path_list, path_mid, command[0]);
