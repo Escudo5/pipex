@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:23:34 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/28 18:29:35 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:44:54 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ int	ft_kid_2(int *fd, int *int_array, char **command_2, char **env)
 	dup2(fd[1], 1);
 	close(fd[0]);
 	close(fd[1]);
+	if (!command_2 || !command_2[0] || command_2[0][0] == '\0')
+	{
+		write(2, "Error: command not found\n", 25);
+		exit(127);
+	}
 	path_mid = NULL;
 	path_command = ft_get_path_command(command_2, env, path_mid);
 	if (path_command)
@@ -42,6 +47,11 @@ int	ft_kid_1(int *fd, int *int_array, char **command_1, char **env)
 	close(fd[1]);
 	dup2(int_array[1], 1);
 	close(int_array[1]);
+	if (!command_1 || !command_1[0] || command_1[0][0] == '\0')
+	{
+		write(2, "Error: command not found\n", 25);
+		exit(127);
+	}
 	path_mid = NULL;
 	path_command = ft_get_path_command(command_1, env, path_mid);
 	if (path_command)
