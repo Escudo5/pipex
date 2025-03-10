@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:41:26 by smarquez          #+#    #+#             */
-/*   Updated: 2025/02/28 18:29:53 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/03/10 12:16:29 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ char	*ft_check_command(char **path_list, char *path_mid, char *command)
 	char	*path_end;
 
 	i = -1;
+	if (!command || command[0] == '\0')
+	{
+		printf("Error: Comando vacío, no se puede ejecutar\n");
+		return (NULL);
+	}
 	while (path_list[++i])
 	{
 		path_mid = ft_strjoin(path_list[i], "/");
